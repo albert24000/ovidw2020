@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>HTML5 Y CSS3</title>
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<header id="header" class="">
+		<div class="cabeceraPrincipal">
+			<div class="cabecera"><img src="img/logoUNAD2.png" alt=""></div>
+			<div class="cabecera titulo">HTML5 y CSS3</div>
+		</div>
+	</header>
+<nav>
+		<ul class="menuPrincipal">
+			<li class="menu"><a href="#" title="">Inicio</a></li>
+			<li class="menu"><a class="menuSeleccionado" href="#" title="">Lecturas</a>
+				<ul class="listaSubMenu">
+					<li><a href="lectura1.html" title="#">¿Qué es HTML5?</a></li>
+					<li><a href="lectura2.html" title="#">Estructura semántica de HTML5</a></li>
+					<li><a href="lectura3.html" title="#">¿Qué es CSS3?</a></li>
+					<li><a href="lectura4.html" title="#">Propiedades CSS</a></li>
+					<li><a href="lectura5.html" title="#">La etiqueta HTML Audio</a></li>
+				</ul>
+			</li>
+			<li class="menu"><a href="" title="">Multimedia</a>
+				<ul class="listaSubMenu">
+					<li><a href="Multimedia1.html" title="Multimedia1">Video estructura HTML</a></li>
+					<li><a href="Multimedia2.html" title="Multimedia2">Video CSS3</a></li>
+				</ul>
+			</li>
+			<li class="menu"><a href="#" title="">Actividades</a>
+				<ul class="listaSubMenu">
+					<li><a href="actividad1.html" title="#"> Actividad Interactiva parte 1</a></li>
+					<li><a href="actividad2.html" title="#"> Actividad Interactiva Parte 2</a></li>
+				</ul>
+			</li>
+			<li class="menu"><a href="autores.html" title="">Autores</a></li>
+		</ul>
+	</nav>
+    <div class="container">
+    	<div class="ph"><h2>Estructura semántica de HTML5</h2></div>
+    	<div class="panel-body">
+			<p>En relación a la estructura de una web, el lenguaje HTML5 utiliza unas etiquetas que le aportan semántica. El lenguaje es capaz de diferenciar, por ejemplo, entre el encabeza del documento y el pie. Google y otros buscadores son capaces de detectar dicha estructura.</p>
+			<br>
+			<center class="">
+				<div><img class="img2" src="img/html5.png"  /></div>
+			</center>
+			<br>
+			<p>Las etiquetas referentes a la estructura en HTML5 serían:</p><br><br>
+			<ul class="parrafo">
+				<li><em class="parrafo2">header: </em>Representa un grupo que sirve de introducción a un contenido.<br>Normalmente define la cabecera del documento, en donde suelen ir el título del sitio y el logo.<br>El título se podría poner en un h1, y luego, en el article, poner otro h1. Semánticamente serían h1 distintos, ya que cada uno está en una zona distinta de la página web.</li><br>
+				<li><em class="parrafo2">hgroup: </em> Sirve para agrupar por ejemplo un título con su subtítulo. Por ejemplo, el título y el lema</li><br>
+				<li><em class="parrafo2">nav: </em>Para incluir dentro (generalmente en una lista) el menú principal de una web. También se puede utilizar para los menús secundarios.</li><br>
+				<li><em class="parrafo2">article: </em>Representa un contenido que puede ser distribuido o reutilizado como parte independiente, por ejemplo en sindicación. Por ejemplo, podría ser una entrada de un foro o de bitácora, el artículo de un periódico, o un comentario que envía un usuario.<br>
+				A veces los artículos se pueden anidar, y los de dentro están relacionados con el artículo externo y principal. Por ejemplo, sería el caso de cada comentario de un artículo.</li><br>
+				<li><em class="parrafo2">section: </em>Representa una sección general de un documento o aplicación. Es un grupo temático de contenido, y suele tener un encabezado.<br>
+				Por ejemplo, los capítulos de un libro, las pestañas de un contenido dividido en pestañas, o las secciones numeradas de una tesis. La página de inicio de un sitio web podría dividirse en secciones tales como la introducción, novedades, y la información de contacto.</li><br>
+				<li><em class="parrafo2">aside: </em>Es una sección que de alguna forma está relacionada con el contenido principal que la rodea, pero se puede considerar aparte de dicho contenido.<br>
+				En estas secciones se suelen poner lateralmente menús secundarios (dentro de nav), anuncios y banners o citas.<br>
+				Podemos encontrar un pie en cualquiera de las otras secciones del documento (header, article o secction).</li><br>
+			</ul>
+    	</div>
+    </div>
+    <div class="container">
+    	<div class="ph"><h2>Guía HTML5</h2></div>
+    	<div class="panel-body">
+    		<center>
+				<iframe src="pdf/Guia_HTML5_El_presente_de_la_web.pdf" frameborder="0" width="100%" height="400px"></iframe>
+    		</center>
+    	</div>
+    </div>
+	<footer>
+		Diseño de Sitios Web - UNAD &copy; 2020
+	</footer>
+</body>
+</html>

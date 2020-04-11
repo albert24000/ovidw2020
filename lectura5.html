@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HTML5 Y CSS3</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<header id="header" class="">
+        <div class="cabeceraPrincipal">
+            <div class="cabecera"><img src="img/logoUNAD2.png" alt=""></div>
+            <div class="cabecera titulo">HTML5 y CSS3</div>
+        </div>
+    </header>
+<nav>
+        <ul class="menuPrincipal">
+            <li class="menu"><a href="#" title="">Inicio</a></li>
+            <li class="menu"><a class="menuSeleccionado" href="#" title="">Lecturas</a>
+                <ul class="listaSubMenu">
+                    <li><a href="lectura1.html" title="#">¿Qué es HTML5?</a></li>
+                    <li><a href="lectura2.html" title="#">Estructura semántica de HTML5</a></li>
+                    <li><a href="lectura3.html" title="#">¿Qué es CSS3?</a></li>
+                    <li><a href="lectura4.html" title="#">Propiedades CSS</a></li>
+                    <li><a href="lectura5.html" title="#">La etiqueta HTML Audio</a></li>
+                </ul>
+            </li>
+            <li class="menu"><a href="" title="">Multimedia</a>
+                <ul class="listaSubMenu">
+                    <li><a href="Multimedia1.html" title="Multimedia1">Video estructura HTML</a></li>
+                    <li><a href="Multimedia2.html" title="Multimedia2">Video CSS3</a></li>
+                </ul>
+            </li>
+            <li class="menu"><a href="#" title="">Actividades</a>
+                <ul class="listaSubMenu">
+                    <li><a href="actividad1.html" title="#"> Actividad Interactiva parte 1</a></li>
+                    <li><a href="actividad2.html" title="#"> Actividad Interactiva Parte 2</a></li>
+                </ul>
+            </li>
+            <li class="menu"><a href="autores.html" title="">Autores</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="ph"><h2>Descubra los conceptos básicos para trabajar con la etiqueta HTML Audio</h2></div>
+        <div class="panel-body">
+        <p>La audioetiqueta le permite incrustar contenido de audio en sus páginas HTML.
+            Este elemento puede transmitir audio, tal vez usando un micrófono getUserMedia(), o puede reproducir una fuente de audio a la que hace referencia usando el <em class="atributo">src </em> atributo:
+        </p>
+            <div class="code">
+                <div class="code2"><p><&nbsp;audio src="file.mp3"/>&nbsp;&nbsp; </p></div>
+            </div>
+             <br>
+        <p>Por defecto, el navegador no muestra ningún control para este elemento. Lo que significa que el audio se reproducirá solo si se configura en reproducción automática (más sobre esto más adelante)
+             y el usuario no puede ver cómo detenerlo, controlar el volumen o moverse por la pista.
+             Para mostrar los controles integrados, puede agregar el <em class="atributo">controls</em> atributo:</p>
+            <div class="code">
+                <div class="code2"><p><&nbsp;audio src="file.mp3" controls />&nbsp;&nbsp; </p></div>
+            </div>
+            <br>
+        <p>Los controles pueden tener una máscara personalizada.
+             Puede especificar el tipo MIME del archivo de audio utilizando el <em class="atributo">type</em> atributo Si no está configurado, el navegador intentará determinarlo automáticamente:</p>
+            <div class="code">
+                <div class="code2"><p><&nbsp;audio src="file.mp3" controls type="audio/mpeg" />&nbsp;&nbsp; </p></div>
+            </div>
+            <br>
+        <p>Un archivo de audio por defecto no se reproduce automáticamente. Agregue el <em class="atributo">autoplay</em> atributo para reproducir el audio automáticamente:</p>
+            <div class="code">
+                <div class="code2"><p><&nbsp;audio src="file.mp3" controls autoplay />&nbsp;&nbsp; </p></div>
+            </div>
+            <br>
+            <blockquote>
+               <p class="font">Nota: los navegadores móviles no permiten la reproducción automática</p>
+            </blockquote>
+            <br>
+        <p>El <em class="atributo">loop</em> atributo reinicia el audio que se reproduce a las 0:00 si está configurado; de lo contrario, si no está presente, el audio se detiene al final del archivo:</p>
+            <div class="code">
+                <div class="code2"><p><&nbsp;audio src="file.mp3" controls autoplay loop />&nbsp;&nbsp; </p></div>
+            </div>
+            <br>
+        <p>También puede reproducir un archivo de audio silenciado usando el <em class="atributo">muted</em> atributo (no estoy seguro de cuál es la utilidad de esto):</p>
+            <div class="code">
+                <div class="code2"><p><&nbsp;audio src="file.mp3" controls autoplay loop muted />&nbsp;&nbsp; </p></div>
+            </div>
+            <br>
+        <p><h3 class="h3">CORS</h3></p>
+            <p>El audio está sujeto a CORS y, a menos que lo permita en el lado del servidor, un archivo de audio no se puede reproducir de origen cruzado.</p>
+            <br>
+        <p><h3 class="h3">Precargando el audio</h3></p>
+                Si no configura <em class="atributo">autoplay</em>, la especificación dice que los navegadores solo descargarán los metadatos de audio (para averiguar la duración, por ejemplo) pero no descargarán el audio en sí.
+                Puede forzar la precarga del audio usando</p>
+        <p class="h3">Puede forzar la precarga del audio usando:</p>
+            <div class="code">
+                <div class="code2"><p><&nbsp;audio src="song.mp3" preload="auto" />&nbsp;&nbsp; </p></div>
+            </div>
+            <br>
+        <p><h3 class="h3">Mostrar contenido si <em class="atributo">audio</em> no es compatible</h3></p>
+                La audioetiqueta está muy bien soportada , hasta IE9, por lo que hoy en día no debería ser necesario tener un texto de marcador de posición, pero tenemos esta opción.
+                Simplemente agregue una etiqueta de cierre e inserte texto entre la etiqueta de apertura y cierre:</p>
+            <div class="code">
+                <div class="code2"><p><&nbsp;audio src="song.mp3">Etiqueta de audio no compatible < /audio>&nbsp;&nbsp; </p></div>
+            </div>
+            <br>
+        <p><h3 class="h3">Agregar controles nativos</h3></p>
+             En lugar de reproducir automáticamente el audio en segundo plano, puede optar por pedirle al navegador que muestre un conjunto de controles para que el usuario pueda reproducir el audio cuando lo desee, tener alguna indicación de la duración,
+             configurar el volumen y dejar que naveguen por la pista:</p>
+            <div class="code">
+                <div class="code2"><p><&nbsp;audio src="song.mp3" controls />&nbsp;&nbsp; </p></div>
+            </div>
+            <br>
+            <p>Así es como se ve en Chrome:</p>
+            <center>
+                <div><img src="img/audio.png" /></div>
+            </center>
+        <p><p><h3 class="h3">Agregar múltiples fuentes</h3></p>
+             Los navegadores pueden implementar un códec de audio pero no otro. Tal vez desee utilizar un estándar más nuevo que reduzca el tamaño del archivo a la mitad,
+             pero aún desea admitir navegadores más antiguos.
+            Lo haces con la <em class="atributo">source</em> etiqueta:</p>
+            <div class="code">
+                <div class="code2"><p><&nbsp;audio controls></p>
+                    <p><&nbsp;source src="song.opus" type="audio/ogg; codecs=opus"/></p>
+                    <p><&nbsp;source src="song.ogg" type="audio/ogg; codecs=vorbis"/></p>
+                    <p><&nbsp;source src="song.mp3" type="audio/mpeg"/></p>
+                    <p><&nbsp;/audio>&nbsp;&nbsp; </p></div>
+            </div>
+            <br>
+        <p><p><h3 class="h3">Trabajando con eventos de audio</h3></p>
+            Podemos escuchar eventos en cada  <em class="atributo">audio</em> elemento usando JavaScript, para crear proyectos e interfaces interesantes. Hay muchos eventos diferentes para jugar.</p>
+        <p>El  <em class="atributo">play</em> evento se dispara cuando comienza la reproducción de audio:</p>
+            <div class="code">
+                <div class="code2"><p>document.querySelector('video').addEventListener('play', () => {
+                alert('Se está reproduciendo audio!!!')
+                })</p></div>
+            </div>
+            <br>
+        <p>También puede agregar directamente este evento (como los otros) usando el on<p><&nbsp;event> atributo directamente en el elemento HTML:</p>
+            <div class="code">
+                <div class="code2"><p><&nbsp;audio src="song.mp3" controls onplay="playing()" /></p></div>
+            </div>
+            <div class="code">
+                <div class="code2"><p>const playing = () => {
+                alert('Se está reproduciendo audio!!!') }</p></div>
+            </div>
+            <br>
+        <p class="h3">Estos son algunos eventos que puede escuchar:
+            <br>
+            <ul class="parrafo">
+                <li>
+                    <em class="atributo">play </em> el audio comenzó a reproducirse.
+                </li>
+                <li>
+                    <em class="atributo">pause </em> el audio fue pausado.
+                </li>
+                <li>
+                    <em class="atributo">ended </em> reproducción de audio completada.
+                </li>
+                <li>
+                    <em class="atributo">timeupdate </em>  el usuario interactuó con la línea de tiempo de reproducción y avanzó / retrocedió.
+                </li>
+                <li>
+                    <em class="atributo">volumechange </em> el usuario cambió el volumen.
+                </li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        Diseño de Sitios Web - UNAD &copy; 2020
+    </footer>
+</body>
+</html>

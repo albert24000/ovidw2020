@@ -62,10 +62,13 @@ li a {
 }
 
 .listaSubMenu a{
+	padding-top: 5px;
     color: black;
 	display: block;
-	background-color: #F1B529;
+	background-color: #F47920;
+	font-size: 16px;
 }
+
 
 .menu:hover .listaSubMenu{
     display: block;
@@ -123,15 +126,10 @@ footer{
 }
 
 /*Articulos*/
-
 .tituloArticulo{
 	text-align: center;
 	font-weight:bold;
 	margin-bottom: 15px;
 }
 
-/* .articulo{
-	height: 320px;
-	background-color: #DDD;
-} */
 
